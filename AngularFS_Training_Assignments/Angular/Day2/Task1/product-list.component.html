@@ -1,0 +1,19 @@
+<style>
+    #div1
+    {
+      border: 1px solid gray;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      color :  blue;
+      box-shadow: 5px 5px 5px gray;
+    }
+  </style>
+  
+  
+  <div  id="div1" *ngFor="let products of categorizedProduct">
+     Id: {{products.pid}} <br/>
+       Name: {{products.pname}} <br/>
+       Category: {{products.price}} <br/>
+       Price: {{products.category}} <br/>
+  </div>
