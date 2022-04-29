@@ -1,0 +1,29 @@
+<style>
+    .c1
+    {
+        border: 1px solid gray;
+        border-radius : 10px;
+        width : auto;
+        height: auto;
+        padding : 5px;
+        text-align: center;
+        margin: 5px;
+        float:left;
+        box-shadow: 5px 5px 2px black;
+    }
+  </style>
+
+<h3>Working with slice pipe in Angular</h3>
+<hr/>
+
+<button  (click)="nextItems_click()">Load More... >> </button>
+<br/><br/>
+<div class="c1" *ngFor="let item of empsArray | slice : start : end">
+    Employee Name: {{item.empno}} <br/>
+    Employee Name: {{item.ename | titlecase}} <br/>
+    Employee Name: {{item.pgrade | grade}} <br/>
+    Employee Name: {{item.job | uppercase}} <br/>
+    Employee Name: {{item.sal | currency}} <br/>
+    Employee Name: {{item.deptno}} <br/>
+
+</div>
