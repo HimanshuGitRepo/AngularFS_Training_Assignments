@@ -1,0 +1,33 @@
+<h3>Working with slice pipe in Angular</h3>
+<hr/>
+
+<h4>Find the Employees within the Salary Range..</h4>
+
+
+Minimum Value: <input type="number" [(ngModel)] = "minSal" placeholder="Enter the Minimum Salary."/>
+ 
+Maximum Value : <input   type="number" [(ngModel)] ="maxSal" placeholder="Enter the Maximum salary."/>
+<br>
+<br>
+<input type="submit" value="Find.." (click)="filterData_click()">
+<br><br>
+
+<table width="500"  cellspacing="0"  cellpadding="3"  border="2">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th>Emp Grade</th>
+      <th>Emp Job</th>
+      <th>Emp Salary</th>
+      <th>Emp Deptno</th>
+    </tr>
+  
+    <tr *ngFor="let item of empsArray | salaryFilter: filterMinSal : filterMaxSal ">
+        <td>{{item.empno}}</td>
+        <td>{{item.ename }}</td>
+        <td>{{item.pgrade }}</td>
+        <td>{{item.job }}</td>
+        <td>{{item.sal }}</td>
+        <td>{{item.deptno}}</td>
+    </tr>
+  </table>
