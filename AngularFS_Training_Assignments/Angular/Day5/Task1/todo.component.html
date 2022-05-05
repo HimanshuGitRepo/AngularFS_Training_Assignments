@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">ToDoInput</h1>
+
+<input type="text"  [(ngModel)]="addToDo"  placeholder="New ToDo"  style="width: 100%; text-align: center;" />
+<br/>
+<br/>
+<button style="width: 100%; background-color: darkcyan; color: white;" (click) = "addToDoItem_click()">Add new Task...</button>
+
+<h2 style="text-align: center;">ToDoList</h2>
+
+<table style="width: 100%;">
+    <tr *ngFor="let item of toDoArray">
+        <td>{{item.toDoItem}}</td>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>
+            <a (click) = "editToDoItem()" href="javascript:void(0);">
+                <img src="assets/Edit.png" alt="" width="30" />
+            </a>
+            
+        </td>
+        <td>
+            <a (click) = "deleteClick(item.id)" href="javascript:void(0);">
+                <img src="assets/Delete.png" alt="" width="30" />
+            </a>
+        </td>
+    </tr>
+</table>
+<div style="width: 100%; align-self: flex-start;">
+    <button style="width: 50%; background-color: red; color: white;">Delete done Tasks...</button>
+    <button style="width: 50%; background-color: red; color: white;" (click) = "deleteAllItems_click()">Delete all Tasks...</button>
+</div>
