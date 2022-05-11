@@ -1,0 +1,41 @@
+import { GradePipe } from './grade.pipe';
+
+describe('GradePipe', () => {
+
+  let pipe: GradePipe;
+
+  beforeEach(() => {
+    pipe = new GradePipe();
+  });
+
+  it('create an instance', () => {
+    expect(pipe).toBeTruthy();
+  });
+
+  it('should return "Outstanding" when input is 1', () => {
+    const result: string = pipe.transform(1);
+    expect(result).toBe("Outstanding");
+  });
+
+  it('should return "Excellent" when input is 2', () => {
+    const result: string = pipe.transform(2);
+    expect(result).toBe("Excellent");
+  });
+
+  it('should return "Good" when input is 3', () => {
+    const result: string = pipe.transform(3);
+    expect(result).toBe("Good");
+  });
+
+  it('should return Empty when input is invalid', () => {
+    const result: string = pipe.transform(5);
+    expect(result).toBe("");
+  });
+
+  it('should return Empty when input is invalid', () => {
+    const result: string = pipe.transform(6);
+    expect(result).toBe("");
+  });
+
+  
+});
