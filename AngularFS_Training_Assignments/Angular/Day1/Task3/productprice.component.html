@@ -1,0 +1,11 @@
+<h1>Price Calculator...</h1>
+Product Name: <input type="text" [(ngModel)]= "pname"/>
+<br/><br/>
+Unit Price: <input type="text"[(ngModel)]="uprice" />
+<br /><br/>
+Quantity: <input type="number"[(ngModel)]="qty" />
+<br/><br/>
+<button (click)="get_total()">Get Total</button>
+<br/><br/>
+<p style="color: red;">{{result1}}</p>
+<p style="color: blue;">{{result2}}</p>
