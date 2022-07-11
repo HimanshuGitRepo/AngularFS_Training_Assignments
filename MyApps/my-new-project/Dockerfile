@@ -3,7 +3,7 @@ FROM node
 WORKDIR /myangularapp
 
 COPY . .
-RUN nmp install -g http-server
+RUN npm install -g http-server
 
 
 EXPOSE 80
